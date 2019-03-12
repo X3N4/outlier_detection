@@ -1,10 +1,19 @@
-# K-Means--
-A class based implementation of the k-means-- algorithm proposed by Chawla and Gionis.
-The original paper can be [here](http://pmg.it.usyd.edu.au/outliers.pdf).
+![O-Means outlier detection example for different sensitivities z](https://imgur.com/o2Fcupx)
+# Outlier detection algorithms
+This repo contains class based implementations of three outlier detection algorithms.  
+Implementations were used for a university project.  
+
+### Outlier detection  Using Clustering Methods [2004, Loureiro et. al]
+Uses agglomerative clustering to detect outliers. The hierarchy is cut at a specified number of clusters. All clusters containing less samples than a threshold are considered outliers.  
+The original paper can be found [here](https://s3.amazonaws.com/academia.edu.documents/6017200/10.1.1.61.7266.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1552377224&Signature=fzO2QVU%2Bz2igsWE3OT4OBqpUT%2B8%3D&response-content-disposition=inline%3B%20filename%3DOutlier_detection_using_clustering_metho.pdf).
+### k-means-- [2013, Chawla & Gionies]
+Uses a modified k-means algorithm to perform robust centroid updates with respect to outliers. The points with the largest point to centroid distances are considered outliers.  
+The original paper can be found [here](http://pmg.it.usyd.edu.au/outliers.pdf).
+### o-medians
+Outlier detection algorithm based on k-means# [2017, Olukanmi & Twala]. Uses a k-medians based robust hierarchical initialization [2007, Arai & Barakbah]. Performs k-medians and detects the points which are more than z standard deviations distant from their centroid as outliers. Additionally clusters which are both distant from all other clusters and contain few observations are considered as clusters of outliers.
 
 ## Getting Started
-
-Clone the repo.
+Experiments.py contains a number of sample experiments on toy datasets.
 
 ### Prerequisites
 
@@ -12,39 +21,18 @@ Python 3.x
 * numpy
 * pandas
 * SciPy
-* scikit learn
+* scikit-learn
 * matplotlib
 
-All prerequisites are part of the Anaconda Python distribution.
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+It is recommended to install the requirements through the Anaconda Python distribution.
+IMPORTANT: scikit-learn version needs to be >0.20.0, else the function pairwise_distances_argmin_min is bugged.
 
 
 ## Authors
 
 * **Timo Klein** -
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Jake VanderPlas' for the k-means code this project is based on.
-* Oscar for being a cool cat
+* Oscar for being a cool cat and lending his name to the project
