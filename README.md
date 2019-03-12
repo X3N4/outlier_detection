@@ -1,7 +1,7 @@
-![O-Means outlier detection example for different sensitivities z](https://i.imgur.com/o2Fcupx.jpg)
 # Outlier detection algorithms
 This repo contains class based implementations of three outlier detection algorithms.  
 Implementations were used for a university project.  
+![O-Means outlier detection example for different sensitivities z](https://i.imgur.com/o2Fcupx.jpg)
 
 ### Outlier detection  Using Clustering Methods [2004, Loureiro et. al]
 Uses agglomerative clustering to detect outliers. The hierarchy is cut at a specified number of clusters. All clusters containing less samples than a threshold are considered outliers.  
