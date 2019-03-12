@@ -1,4 +1,4 @@
-![O-Means outlier detection example for different sensitivities z](https://imgur.com/o2Fcupx)
+![O-Means outlier detection example for different sensitivities z](https://i.imgur.com/o2Fcupx.jpg)
 # Outlier detection algorithms
 This repo contains class based implementations of three outlier detection algorithms.  
 Implementations were used for a university project.  
